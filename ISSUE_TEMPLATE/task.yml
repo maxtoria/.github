@@ -1,0 +1,36 @@
+name: Task
+description: A planned piece of work (feature, tech debt, security, SEO or ops request).
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done, and which number it should move (bookings, complaints, time saved…).
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included and what is not. Repos and screens involved.
+    validations:
+      required: true
+  - type: input
+    id: clickup
+    attributes:
+      label: ClickUp card
+      description: Link to the ClickUp request or roadmap card this comes from.
+  - type: input
+    id: score
+    attributes:
+      label: Score
+      description: (Revenue + Customer&Ops + Strategic) × Confidence ÷ Effort, from Monday triage.
+      placeholder: "e.g. 5.3 = (2 + 3 + 3) × 100% ÷ 1.5 wks"
+  - type: checkboxes
+    id: deploy
+    attributes:
+      label: Deploy notes
+      options:
+        - label: Needs a database migration (apply before deploy)
+        - label: Needs a new `.env` value on the server
+        - label: Changes something operators or customers see (needs a release-note line)

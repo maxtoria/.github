@@ -1,0 +1,54 @@
+name: Bug
+description: Something on the site, an app or the admin panel works wrongly.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Non-engineers: please use the **Request to Development** form in ClickUp instead. This form is for the software team.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you saw, and what should have happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Page or screen, steps, booking number if a booking is involved.
+      placeholder: |
+        1. Open …
+        2. Click …
+        3. See …
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Website (maxtoria.com)
+        - Customer app (Android / iOS)
+        - Operator app (profile.maxtoria.com)
+        - Admin panel
+        - E-mail / WhatsApp messages
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgent
+      description: P0 = booking or payment broken, money being lost, security or legal problem.
+      options:
+        - P0 – fix now
+        - Normal – goes to Monday triage
+    validations:
+      required: true
+  - type: input
+    id: clickup
+    attributes:
+      label: ClickUp card
+      description: Link, if the bug came in as a ClickUp request.

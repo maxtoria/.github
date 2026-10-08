@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Request something from the software team (non-engineers)
+    url: https://app.clickup.com
+    about: Use the "Request to Development" form in ClickUp → Development → Requests from teams.
