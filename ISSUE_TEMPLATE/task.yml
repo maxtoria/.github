@@ -1,5 +1,6 @@
 name: Task
 description: A planned piece of work (feature, tech debt, security, SEO or ops request).
+projects: ["maxtoria/2"]
 body:
   - type: textarea
     id: goal
