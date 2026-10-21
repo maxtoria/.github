@@ -1,6 +1,7 @@
 name: Bug
 description: Something on the site, an app or the admin panel works wrongly.
 title: "Bug: "
+projects: ["maxtoria/2"]
 body:
   - type: markdown
     attributes:
